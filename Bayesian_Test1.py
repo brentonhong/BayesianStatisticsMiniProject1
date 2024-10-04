@@ -26,9 +26,3 @@ print(f"The predicted probability of the school winning is: {win_probability * 1
 x_values = np.arange(0, 15).reshape(-1, 1)  # Possible range of opponent wins
 y_values = log_reg.predict_proba(x_values)[:, 1]
 
-plt.plot(x_values, y_values, label="Win Probability Curve")
-plt.scatter(opponent_wins, game_results, color='red', label="Actual Data")
-plt.xlabel("Opponent Wins")
-plt.ylabel("Probability of Winning")
-plt.title("Win Probability vs. Opponent Wins")
-plt.legend()
